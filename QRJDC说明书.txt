@@ -1,0 +1,47 @@
+Q：字体乱码，没有中文字体
+A：https://www.cnblogs.com/huangyanqi/p/10609587.html
+
+Q：日志里面出现WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+A：这是Flask框架的一个警告，如果你没有几千几万的日活，就无需理会
+
+Q：出现  ERROR: Could not open requirements file: [Errno 2] 没有那个文件或目录: 'requirementstxt'
+A：你都不舍得进入源码根目录再执行吗？
+
+Q：此CK能用多长时间？有没有挤号？
+A：2022.03.20测试结果（30天有效期、暂时没有挤号问题）
+
+Q：能不能出一个 不用宝塔的教程
+A：这个你需要自行研究，不用宝塔也可以。你的系统拥有Python3.7+的版本和Linux版Chrome即可。后台运行可以搭配nohup使用
+
+Q：用chromuim可以吗，代替chrome
+A：可以，但是需要你去修改源码指定浏览器位置，还要替换对应驱动
+
+Q：请求出错，请刷新页面重新登录
+A：出现这个问题，请先看一下日志里面的报错是什么，然后接着往下看
+
+Q：无法启动，无法显示二维码
+A：第一步请检查自己的Chrome版本和驱动的版本是否匹配，其次下载好的驱动也是需要至少 755 的权限别忘记
+
+Q：日志里面可以看见CK，但是前端提示获取CK失败
+A：大概率是QL版本引起的问题，我是按照旧版本的api参数开发的。新版本的参数有点不一样，导致出错。【自己无法解决可以TG找我：https://t.me/Nuanxinqing】
+
+Q：驱动Google Chrome 99.0.4844.74 这个版本没有搜到到
+A：不需要全部一样，只要前面的 99.0.4844 对的上就可以了，第四个小数点后面的版本号无所谓
+
+Q：使用Supervisor管理工具   btpython app.py 守护，运行失败 启动不了
+A：大概率是你启动路径写错了，或者你在启动命令里面携带了路径
+
+Q：可以多容器设置嘛？
+A：JDC不可以，但是可以自己写一些工具或插件实现
+
+Q：win能不能运行呀？
+A：Win可以，但是Win跑这个就有点小材大用了。需要的可以自己替换文件，修改一下源码
+
+Q：运行：btpip install -i https://pypi.tuna.tsinghXXXXXXXXX，报错：-bash: btpip: command not found
+A：这是你在没有安装BT面板的机器上执行出现的
+
+Q：傻妞插件回复1之后出现错误
+A：请检查傻妞插件里面的url地址是否已对接，对接地址是否正确
+
+Q：根目录没有日志文件
+A：因为和傻妞插件有冲突，暂时移除了
