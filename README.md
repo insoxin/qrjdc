@@ -3,7 +3,8 @@
 
 我把CSS js改回mdui官方 防止第三方失效
 也避免第三方中间人攻击
-
+背景优化css自适应大小 并更换随机图 
+![image.png](https://dd-static.jd.com/ddimg/jfs/t1/223497/11/8124/1442442/62418250E28541af2/eef662757fef2eeb.png)
 # 说明
 JDCookie获取Python 学习版
 
