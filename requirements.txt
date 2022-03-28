@@ -1,6 +1,0 @@
-requests==2.26.0
-selenium==4.1.0
-Flask==2.0.2
-Pillow==8.4.0
-flask-cors==3.0.10
-gevent==21.12.0
