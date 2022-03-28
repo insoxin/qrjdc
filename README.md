@@ -6,7 +6,9 @@
 
 2.增加 Cookie获取成功的提示自定义.
 
-3.增加背景图自定义 同时修正css自适应北背景 默认 每日bing    其他推荐: [更多随机壁纸](https://api.isoyu.com/#/%E5%A3%81%E7%BA%B8%E6%A8%A1%E5%9D%97?id=_0-%e5%a3%81%e7%ba%b8%e6%a8%a1%e5%9d%97 "更多随机壁纸")
+3.增加背景图自定义 同时修正css自适应北背景 默认 每日bing    
+
+其他背景图 推荐: [更多随机壁纸](https://api.isoyu.com/#/%E5%A3%81%E7%BA%B8%E6%A8%A1%E5%9D%97?id=_0-%e5%a3%81%e7%ba%b8%e6%a8%a1%e5%9d%97 "更多随机壁纸")
 
 ![image.png](https://dd-static.jd.com/ddimg/jfs/t1/107425/9/25402/1328235/6241997eE95fa05bf/af3ec8f26e7d0173.png)
 
