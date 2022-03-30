@@ -6,12 +6,14 @@
 import json
 import selenium
 import time
-
+import _thread
+from urllib.parse import urlparse
 from PIL import Image
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.remote.command import Command
 
 from cookie import cookie
 
@@ -41,6 +43,7 @@ with open("./config/config.json", encoding="utf-8") as f:
     config_json = json.load(f)
 
 global browser
+
 
 def QRStart():
     global browser
@@ -92,6 +95,10 @@ def QRStart():
     img.save('./static/QR/2.png')
     if config_json["Main"]["Mode"] == "DEBUG":
         print("局部截图完成")
+
+    # 启动计时器
+    _thread.start_new_thread(timeOutCount, ())
+
     return 1001
 
 
@@ -192,3 +199,29 @@ def QRPhoneCode(code):
 def quitBrowser():
     print("主动申请退出浏览器")
     browser.quit()
+
+
+# 超时计时器
+def timeOutCount():
+    global browser
+    # 计数器
+    count = 0
+    # 状态
+    condition = 1
+
+    while count < 125:
+        # 检测Browser是否存在
+        try:
+            # 状态：运行中...
+            browser.execute(Command.STATUS)
+            # 计数器 + 1
+            time.sleep(1)
+            count += 1
+        except:
+            # 状态：已关闭
+            condition = 0
+            break
+    if condition == 1:
+        # 强制关闭
+        print("用户未操作，已自动关闭")
+        browser.quit()
